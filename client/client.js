@@ -1,4 +1,4 @@
-const ENDPOINT = "https://stark-woodland-80891.herokuapp.com/";                    // Connect with server
+const ENDPOINT = "https://messenger-app-node.herokuapp.com/";                    // Connect with server
 const socket = io(ENDPOINT);
 
 // Events Handling (Client-side)
