@@ -11,8 +11,8 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 // Server main app index file
-app.use(cors());
 app.use(router);
+app.use(cors());
 
 // Obj to store each users
 users = {};
