@@ -1,18 +1,20 @@
 const express = require("express");
-const socketio = require("socket.io");
+
 const router = require("./router");
 const http = require("http");
-const cors = require("cors");
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = require('socket.io')(server, {
+  cors: {
+    origin: '*',
+  }
+});
 
 // Server main app index file
 app.use(router);
-app.use(cors());
 
 // Obj to store each users
 users = {};

@@ -1,4 +1,4 @@
-const ENDPOINT = "https://messenger-app-node.herokuapp.com/";                    // Connect with server
+const ENDPOINT = "http://localhost:3000";                    // Connect with server
 const socket = io(ENDPOINT);
 
 // Events Handling (Client-side)
@@ -18,7 +18,8 @@ socket.on("sendMsg", data => {
 });
 
 // New Message
-document.getElementById("messageForm").addEventListener("submit", e => {
+document.getElementById("button-addon2").addEventListener("click", e => {
+    console.log("Hello World");
     e.preventDefault();                                     // Prevents form from submitting
 
     msgInput = document.getElementById("messageInput");     // Get message
