@@ -1,4 +1,4 @@
-const ENDPOINT = "http://localhost:3000";                    // Connect with server
+const ENDPOINT = "https://messenger-app-node.herokuapp.com/";                    // Connect with server
 const socket = io(ENDPOINT);
 
 // Events Handling (Client-side)
